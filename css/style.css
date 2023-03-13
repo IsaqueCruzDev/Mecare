@@ -151,7 +151,7 @@ section:nth-child(even){
 
 .home{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
