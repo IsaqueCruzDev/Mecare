@@ -660,60 +660,50 @@ section:nth-child(even){
 }
 
 @media (max-width:768px){
-    .close-menu{
-        position: fixed;
-        z-index: 1002;
-        top: 0;
-        left: 0;
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 10%;
+        right: 3rem;
+        border-radius: .5rem;
+        -webkit-border-radius: .5rem;
+        -moz-border-radius: .5rem;
+        -ms-border-radius: .5rem;
+        -o-border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: #fff;
         display: none;
-    }
-
-    .header{
-        display: block;
-    }
-
-    .header .navbar{
-        display: none;
-    }
-
-    .header ul{
+}
+    .header .navbar ul{
         display: flex;
         flex-direction: column;
-        text-align: center;
     }
-
-    .header ul li{
-        padding: 0.5rem;
-    }
-
-    .close-menu-label::after{
-        content: "☰";
-        position: fixed;
-        z-index: 1002;
-        top: 2.1rem;
-        right: 2rem;
-        background: var(--green);
-        color: #fff;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        text-align: center;
-        padding: 0.5rem;
-        cursor: pointer;
-    }
-
-    .close-menu:checked~.header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        bottom: 0;
-    }
-
-    .close-menu:checked~.header .navbar{
+    .header .navbar ul li a{
+        font-size: 2rem;
         display: block;
+        margin: .8rem;
     }
+
+.header .navbar.active {
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    border: var(--border);
+    background: #fff;
+    display: block;
+}
 
     /* Fim Header */
 
